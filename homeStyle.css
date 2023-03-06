@@ -1,0 +1,514 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+}
+/*------------------------------------------------message----------------------------------------------------*/
+.fixed-button a{
+    padding: 15px 20px;
+    background:  linear-gradient(90deg,rgb(0, 0, 0),rgb(255, 0, 0)) ;
+    color: #ffffff;
+    border-radius: 60px;
+    text-decoration: none;
+    font-size: 20px;
+    
+
+}
+.fixed-button{
+    z-index: 3;
+    margin-top: 42%;
+    margin-left: 85%;
+
+    position: fixed;
+    
+}
+.fixed-button a:hover{
+    background: rgb(255, 255, 255);
+    
+    color: #000000;
+    transition: .5s;
+    
+}
+/*----------------------------------------- top navigation bar and container---------------------------------------------*/
+.container{
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    
+    animation: background-slide 18s infinite;
+    
+    
+    position: relative;
+    /* padding-top: 2%; */
+    box-sizing:border-box ;
+}
+
+@keyframes background-slide{
+    0%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.8)), url(media/bg1.png);
+    
+    }
+    20%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.8)), url(media/bg1.png) ;
+    }
+    20.01%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.8)), url(media/bg2.jpg);
+    
+    }
+    40%{
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.8)), url(media/bg2.jpg);
+    }
+    40.01%{
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.8)), url(media/bg3.jpg);
+    
+    }
+    60%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.8)), url(media/bg3.jpg);
+    }
+    60.01%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.8)), url(media/bg4.jpg);;
+    
+    }
+    80%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.8)), url(media/bg4.jpg);;
+    }
+    80.01%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.8)), url(media/bg5.jpg);;
+    
+    }
+    100%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.8)), url(media/bg5.jpg);;
+    }
+}
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    padding: 0px,60px;
+    box-sizing: border-box;
+    position:fixed;
+    z-index: 1;
+}
+.logo{
+    margin-left: 4%;
+    width: 4%;
+}
+
+.logo img{
+    width: 150px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+nav{
+    margin-left: 100px;
+    flex: 1;
+}
+nav ul{
+    padding-left: 10%;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 3%;
+    align-items:center;
+    position: relative;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(194, 191, 191);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    
+
+}
+nav ul li a:hover{
+transition: 0.5s;
+color: #fff ;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+    
+}
+
+  
+
+.user{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    
+}
+.user img{
+    width: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.user p{
+    font-size: 30px;
+    font-family: Freestyle Script;
+}
+/*------------------------------------------------------top middle---------------------------------------------------*/
+.msg-container{
+    width: 40%;
+    height:450px;
+    position: absolute;
+    left: 28%;
+    top:65%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    
+}
+.event-btn:hover{
+    color:black;
+    background: #fff;
+    transition: .5s;
+}     
+#slider{
+    display: inline-flex;
+    transition: 0.5s;
+}
+.msg-col{
+    width: 650px;
+    height: 280px;
+    
+
+}
+.msg-col h1{
+    color: #fff;
+    font-size: 70px;
+    font-weight: 100;
+    margin: 10px 0;
+    text-align: center;
+}
+.msg-col p{
+    color: #ddd;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    
+    
+
+
+}
+.msg-col a{
+    display: inline;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background:  linear-gradient(90deg,rgb(0, 0, 0),rgb(255, 0, 0)) ;
+    font-size: 15px;
+    padding: 10px 35px;
+    border-radius: 30px;
+    margin-left: 32%;
+    
+
+
+} 
+.controller{
+    width: 320px;
+    height: 1px;
+    display: block;
+    background: #ffffff;
+    position: absolute;
+    top:83%;
+    left: 39.5%;
+    transform: translateY(-50%);
+
+
+}
+#line1,#line2,#line3,#line4{
+    height: 10px;
+    width: 75px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    
+    display:inline-block;
+    
+    
+}
+
+
+
+#active{
+    width: 80px;
+    height: 5px;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    top:0;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+
+
+
+/*------------------------------------------------welcome to event.lk----------------------------------------------------*/
+.middle{
+    background:linear-gradient(180deg ,rgb(255, 255, 255), rgb(168, 168, 168));
+    padding: 120px 0;
+    color: rgb(0, 0, 0);
+}
+.middle-title{
+    text-align: center;
+    font-size: 80px;
+    color: rgb(221, 0, 0) ;
+    font-weight:lighter;
+    letter-spacing: 3px;
+    font-family: Calibri Light;
+
+}
+
+.middle-p{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    letter-spacing: 1.5px;
+    word-spacing: 4px;
+}
+.title-logo{
+    margin-bottom: -1%;
+    width : 30%
+}
+
+
+/*------------------------------------------------------add----------------------------------------------------------*/
+
+.text-review{
+    background:linear-gradient(rgba(0,0,0,0.75),rgba(0, 0, 0, 0.432)),url(media/b2.jpg) no-repeat  center ;
+    background-attachment: fixed;
+}
+
+.main-text{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-left: 200px;
+
+}
+
+
+ .animated-text{
+    box-sizing: border-box;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0;
+    margin-top: 0px;
+   
+
+}
+.animated-text .optional-texts{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden; 
+}
+.optional-texts li{
+    list-style: none;
+    color: red;
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slides 22.5s steps(5) infinite;
+
+
+}
+@keyframes slides {
+    100%{
+       top: -450px;
+    }
+}
+.optional-texts li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+
+}
+.optional-texts li span:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    padding-bottom: 15px;
+    border-left: 2px solid red; 
+    animation: typing 4.5s steps(17) infinite;
+    
+}
+@keyframes typing {
+    
+    40%, 60%{
+        left: calc(100% + 30px);
+    }
+    100% {
+        left:0;
+    }
+    
+}
+
+
+/*------------------------------------------------------reviews----------------------------------------------------------*/
+.review-space{
+    
+    padding-bottom: 7%;
+    margin-bottom: -1.5%;
+   
+}
+
+.users img{
+    clip-path: circle(50.2% at 50% 50%);
+    width:70px;
+    height: 70px;
+    margin: 6% 41% auto 41%;
+}
+.paddings{
+    height:330px;
+    color: #ffffff;
+    width:300px;
+    text-align: center;
+    background:  rgba(255, 255, 255, 0.295) ;
+    
+   
+    border-radius: 20px;
+    
+}
+.paddings p{
+    text-align: justify;
+    margin: 10% 5%;
+    font-size: 15px;
+    font-weight: 510;
+
+    
+}
+.paddings:hover{
+   height: 380px;
+   width: 340px;
+   transition: .5s;
+   font-size: 20px;
+   margin: -25px -20px;
+   background-color: rgba(0, 0, 0, 0.658)  ;
+   
+   
+}
+.review-table{
+    margin: auto;
+    width: 75%;
+   
+}
+.review-table td{
+    
+    padding-left:auto 7% auto 7%;
+    padding-top:5% ;
+}
+.yellow-star{
+    color: yellow;
+    font-size: 20px;
+    
+}
+
+/*-------------------------------------------------------map---------------------------------------------------------*/
+.map{
+    margin-top: 20px;
+    
+    
+    
+}
+/*-------------------------------------------------------footer---------------------------------------------------------*/
+
+footer{
+    margin-top: -5px;
+    bottom: 0px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    color: #ddd;
+}
+.main-content{
+    display: flex;
+}
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+.box h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.box .content{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+  
+.box .content:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #f12020;
+    top: -10px;
+}
+
+.content ul li{
+    margin-left: 6%;
+}
+.center{
+    margin-left: 5%;
+}
+.left{
+    margin-left: 3%;
+}
+ .text{
+padding: 5px;
+ }
+ .s-icons{
+     width: 40px;
+     padding: 25px 15px 0 0 ;
+ }
+ .s-icons-y{
+     height: 50px;
+     padding: 15px 0 0 0;
+ }
+.logo-bottom {
+    width: 20%;
+    margin-left: 40%;
+}
+.logo-bottom-p {
+    font-size: 20px;
+    margin-left: 40%;
+}
+#copyright{
+    margin: 3% 26% auto 26%;
+}
+
+
+
+  
+
+  
+  
+  
+ 

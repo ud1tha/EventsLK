@@ -1,0 +1,163 @@
+
+*{
+margin: 0;
+padding: 0;
+background:url("media/background.png");
+background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+color: #fff;
+font-family: "Poppins",sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    padding: 0px,60px;
+    box-sizing: border-box;
+    
+
+}
+.logo{
+    margin-left: 4%;
+    width: 4%;
+}
+
+.logo img{
+    width: 150px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+nav{
+    margin-left: 100px;
+    flex: 1;
+}
+nav ul{
+    padding-left: 10%;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 3%;
+    align-items:center;
+    position: relative;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(194, 191, 191);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    
+
+}
+nav ul li a:hover{
+transition: 0.5s;
+color: #fff ;
+
+}
+
+nav ul li:hover::after{
+    width: 100%;
+    
+}
+.user{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    
+}
+.user img{
+    width: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.user p{
+    font-size: 30px;
+    font-family: Freestyle Script;
+    
+}
+
+h1{
+    margin: 10% auto auto 6%;
+    font-weight: 300;
+    color: rgb(255, 0, 85);
+    background-color: transparent;
+    font-size: 40px;
+    
+
+}
+#name{
+    font-size: 60px;
+    margin-left: 6%;
+    
+     ;
+}
+.uowid{
+    font-size: 20px;
+    color: gray;
+    margin-left: 6%;
+}
+dl{
+    margin-left: 6%;
+    margin-top: 3%;
+}
+dt{
+    font-size: 22px;
+    margin-top: 1%;
+    color: rgb(209, 209, 209);
+    font-size: 22px;
+   
+    
+}
+.parts{
+    margin-left: 10%;
+    margin-top: 0.5%;
+    color: rgb(209, 209, 209);
+    font-size: 22px;
+}
+.icons{
+    width:50px;
+    
+}
+.socialmedia ul{
+    margin-left: 8%;
+    margin-top: 7%;
+}
+.socialmedia ul li{
+    display: inline;
+    margin:auto 4% auto 0;
+}
+.icons:hover{
+    margin: -20px;
+    width: 90px ;
+    
+    height: auto;
+    transition: 0.5s;
+}
+.profile-photo{
+    float: right;
+    width: 50%;
+    height: 50%;
+    margin-top: -38%;
+    
+    
+    
+}

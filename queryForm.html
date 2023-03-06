@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="queryFormStyle.css">
+    <title>Query Form</title>
+    <script src="./queryscript.js"></script>
+</head>
+<body> 
+    <div class="conteiner" id="firstView">
+        
+        <h1>EVENTS.LK</h1>
+        <p>plan your memorable event with us</p>
+        <form action="#">
+            <div>
+                <table class="tabel1">
+                    <tr>
+                        <td>
+                            <div >
+                                <span class="labels">Name <span class="redstar">*</span></span>
+                                <input required class="fields" type="text" placeholder="Enter your name" id="name" >
+                            </div>
+                        </td>
+                        <td>
+                            <div >
+                                <span class="labels">Contact Number</span>
+                                <input required class="fields"  type="tel" placeholder="Enter your contact number here" id="number" >
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div >
+                                <span class="labels">E-mail <span class="redstar">*</span></span>
+                                <input required class="fields" type="email" placeholder="Enter your e-mail" id="email" >
+                            </div>
+                        </td>
+                        <td>
+                            <div >
+                                <span class="labels">Messege <span class="redstar">*</span></span>
+                                <textarea required class="fields" rows="5" placeholder=" message" id="message" ></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <br>
+                            <div id="time">
+                                <label id="event-time" >The time of the event</label> <br><br>
+                                <input required type="radio" id="day" name="time" value="Day" >
+                                <label for="day" class="inner-label">Day</label><br>
+                                <input type="radio" id="night" name="time" value="Night">
+                                <label for="night" class="inner-label">Night</label><br>
+                                <input  type="radio" id="both-time" name="time" value="Day and Night">
+                                <label for="both-time" class="inner-label">Both</label>
+                            </div>
+                            <br>
+                        </td>
+                    </tr>
+            
+                    <tr>
+                        <td>
+                            <div>
+                                <br>
+                                <label for="event">Select your event</label>
+                                <select  class="fields" name="event" id="event" required>
+                                    <option value="">None</option>     
+                                    <option value="Wedding">Wedding</option>
+                                    <option value="Live music show">Live music show</option>
+                                    <option value="Party">Party</option>
+                                    <option value="Family function">Family function</option>
+                                    <option value="Family function">Family function</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                        <br>
+                            <div>
+                                <label for="participants">Number of participants</label>
+                                <select required class="fields" name="participants" id="participants">
+                                    <option value="">None</option>
+                                    <option value="0 - 50">0 - 50</option>
+                                    <option value="50 - 150">50 - 150</option>
+                                    <option value="150 - 300">150 - 300</option>
+                                    <option value="300 - 500">300 - 500</option>
+                                    <option value="500+">500+</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="SendMail()">Send Mail</button>
+                        </td>
+                        <td>
+                            <button onclick="ViewQueryFunction()">View Query</button>
+                        </td>
+                    </tr>
+            
+                 </table>
+            </div>
+            Copyright © 2022 Events.LK . All Rights Reserved. Developed by <a href="savindu.html">Savindu</a>
+        </form>
+    </div>
+    
+    <div class="class"></div>
+        <div class="conteiner2" id="secondView">
+                <h1>EVENTS.LK</h1>
+                <p>plan your memorable event with us</p>
+                <form action="#">
+                    <div>
+                        <table class="tabel2">
+                            <tr>
+                                <td>  
+                                    <span >Name</span>
+                                </td>
+                                <td>
+                                    <label  id="inputname"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                 <td>
+                                     <span >E-mail</span>
+                                </td>
+                                <td>
+                                    <label  id="inputemail"></label>
+                                </td>
+                            </tr>
+                            <tr>
+
+                                    <td>
+                                        <span>Message</span>
+                                    </td>
+                                    <td>
+                                        <label  id="inputmessage"></label>
+                                    </td>
+
+                            </tr> 
+                            <tr>     
+                                <td>
+                                    <span >Event</span>
+                                </td>
+                                 <td>
+                                    <label  id="inputevent"></label>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span >Time of the event</span>
+                                </td>
+                                <td>
+                                    <label  id="inputtime"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td  colspan="2">
+                                    <button onclick="EditQueryFunction()">Edit</button>
+                                    <button onclick="SendMail()">Send</button>
+                                </td>
+                            
+                            </tr>
+                        </table>
+                        
+                    </div>
+                </form>
+               
+        </div>
+       
+    </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="products.css" />
+    <link rel="icon" type="image/x-icon" href="media/Vlogo.png">
+    <title>Wedding Planning | EVENTS.LK</title>
+  </head>
+  <body>
+    <div class="navbar"> 
+      <div class="logo">
+          <img src="media/logo.png" alt="logo">
+      </div>
+      <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="3.Services.html">Service</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Quiz HM.html">Quiz</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+      </nav>
+      <div class="user">
+          <p>Hello,Anna!&nbsp;&nbsp;&nbsp;</p>
+          <img src="media/user.png" alt="User">
+      </div>
+  </div>
+    <div class="row section">
+      <div class="row">
+        <span>Wedding Planning</span>
+      </div>
+      <div class="product-card">
+        <img src="media/wp2.jpg" alt="racket-bag" style="width: 100%" />
+        <div class="container">
+          <h4><b>LKR 120,000</b></h4>
+          <p>Poruwa or Backdrop</p>
+          <button class="add-to-cart-btn" value="poruwa" onclick="getValues(this)">Add to Package</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="media/wp1.jpg" alt="feather-shuttles" style="width: 100%" />
+        <div class="container">
+          <h4><b>LKR 200   per chair</b></h4>
+          <p>Seating arrangment 30</p>
+          <button class="add-to-cart-btn" value="Seating" onclick="getValues(this)">Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="media/wp3.jpg" alt="badminton-racket" style="width: 100%" />
+        <div class="container">
+          <h4><b>LKR 10,000</b></h4>
+          <p>Wedding cake</p>
+          <button class="add-to-cart-btn" value="cake" onclick="getValues(this)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+        
+    <div class="row section">
+      <div class="inner-section">
+        <h2>Place Order</h2>
+        
+        <form>
+          <div class="personal-detials" id="personal-details">
+            <input type="text" id="name" name="name" value="" placeholder="Name">
+            <input type="text" id="email" name="email" value="" placeholder="Email">
+            <input type="text" id="address" name="address" value="" placeholder="Address">
+            <input type="text" id="contact" name="contact" value="" placeholder="Contact">
+            <span id="number-of-items"></span>
+            <span id="total-price-cart"></span>
+            <button type="button" class="btn btn-check" onclick="genarateBill()">Place Order</button>
+          </div>
+  
+          <div class="invoice-section" id="invoice-section">
+            <h3>Invoice Details</h3>
+
+            <h4>Items:</h4>
+            <ol id="items"></ol>
+
+            <table>
+              <tr>
+                <td class="meta-data">Name: </td>
+                <td class="data" id="user-name"></td>
+              </tr>
+              <tr>
+                <td class="meta-data">Email: </td>
+                <td class="data" id="user-email"></td>
+              </tr>
+              <tr>
+                <td class="meta-data">Contact: </td>
+                <td class="data" id="user-contact"></td>
+              </tr>
+              <tr>
+                <td class="meta-data">Address: </td>
+                <td class="data" id="user-address"></td>
+              </tr>
+              <tr>
+                <td class="meta-data">Total: </td>
+                <td class="data" id="total-price"></td>
+              </tr> 
+            </table>
+            <h1>Thank you for shopping with us!!</h1>
+            <h4>Our Team will contact you shortly</h4>
+          </div>
+        </form>
+      </div>  
+    </div>
+    <footer class="footer">
+      <span>Developed by Group I8</span>
+      <a href="isuri/isuri.html">Page Editor</a>
+    </footer>
+    <script>
+      let total = 0;
+      let NumberOfItems = 0;
+      function getValues (element) {
+        splitValues = (element.value).split(",");
+        itemName = splitValues[0];
+        itemPrice = Number(splitValues[1]);
+        addToCart(itemName, itemPrice);
+      }
+
+      function addToCart(item, price){
+        let listElement = document.createElement("li");
+        let elementContent = document.createTextNode(` ${item}    -    LKR ${price}`);
+        let parentElement = document.getElementById("items");
+
+        listElement.appendChild(elementContent);
+        parentElement.appendChild(listElement);
+        total += price;
+        NumberOfItems +=1;
+        document.getElementById("number-of-items").innerHTML = `Number of Items in the Cart: ${NumberOfItems}`;
+        document.getElementById("total-price").innerHTML = `LKR ${total}`;
+        document.getElementById("total-price-cart").innerHTML = `Total: LKR ${total}`;
+      }
+
+      function genarateBill () {
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let contact = Number(document.getElementById("contact").value);
+        let address = document.getElementById("address").value;
+        let detailCount = 0;
+
+        if (name == "") {
+          alert("Name is required");
+          detailCount++;
+        }else if (email == "") {
+          alert("Email is required");
+          detailCount++;
+        }else if (contact == "") {
+          alert("Contact is required");
+          detailCount++;
+        }else if (address == "") {
+          alert("Address is required");
+          detailCount++;
+        }else if (total == 0) {
+          alert("Please add items to the cart before placing the order");
+          detailCount++;
+        }
+        
+        if (isNaN(contact)){
+          alert("Please enter a valid contact number");
+          detailCount++;
+        }
+        
+        if (detailCount == 0) {
+          document.getElementById("user-name").innerHTML = name;
+          document.getElementById("user-email").innerHTML = email;
+          document.getElementById("user-contact").innerHTML = contact;
+          document.getElementById("user-address").innerHTML = address;
+          document.getElementById("invoice-section").style.display = "block";
+          document.getElementById("personal-details").style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins",sans-serif;
+}
+
+
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    padding: 0px,60px;
+    box-sizing: border-box;
+    position:fixed;
+}
+
+.logo{
+    margin-left: 4%;
+    width: 4%;
+}
+
+.logo img{
+    width: 150px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+nav{
+    margin-left: 100px;
+    flex: 1;
+}
+
+nav ul{
+    padding-left: 10%;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 3%;
+    align-items:center;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(194, 191, 191);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover{
+transition: 0.5s;
+color: #fff ;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+    
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    
+}
+
+.user img{
+    width: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.user p{
+    font-size: 30px;
+    font-family: Freestyle Script;
+}
+
+.start_btn{
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    text-align: center;  
+}
+
+.start_btn button{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(48, 10, 218);
+    background-color: aqua;
+    border: 0;
+    padding: 15px 30px;
+    outline-color: aliceblue;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+body{
+    background-color: rgb(30, 85, 85);
+    background-image: url("media/quiz5.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-blend-mode: darken;
+    background-color: rgba(0,0, 0, 0.4);
+    background-attachment: fixed;
+}
+
+
+
+.info_box{
+    position: absolute;
+    top: 20%;
+    left: 12%;
+    text-align: left; 
+    color: aliceblue;
+}
+
+.info_box .info_head{
+    font-size: 30px;
+    font-weight: 650;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding: 0px 35px;
+}
+
+.info_box .info_list{
+    padding: 9px;
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.info_box .info_list span{
+    color: rgb(3, 190, 28);
+    text-decoration: underline;
+}
+
+.info_box .info_list1{
+    padding: 10px 25px;
+    font-size: 25px;
+    font-weight: 400;
+    color: beige;
+    font-style: italic;
+}
+
+.nice{
+    position:relative;
+    left: 900px;
+    top: 200px;
+
+}
+
+.nice .txt{
+    font-size: 65px;
+    color: aliceblue;
+    font-weight: 700;
+    font-style: italic;
+}

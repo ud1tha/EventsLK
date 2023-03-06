@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+}
+
+body {
+    background-image: url('media/blured_bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+/*----------------------------------------- top navigation bar and container---------------------------------------------*/
+.container{
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    animation: background-slide 30s infinite;
+    position: relative;
+    padding-top: 0;
+    box-sizing:border-box ;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    padding: 0px,60px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.logo{
+    margin-left: 4%;
+    width: 4%;
+}
+
+.logo img{
+    width: 150px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+nav{
+    margin-left: 100px;
+    flex: 1;
+}
+nav ul{
+    padding-left: 10%;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 3%;
+    align-items:center;
+    position: relative;
+    
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(194, 191, 191);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    
+
+}
+nav ul li a:hover{
+transition: 0.5s;
+color: #fff ;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+    
+}
+
+  
+
+.user{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    
+}
+.user img{
+    width: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.user p{
+    font-size: 30px;
+    font-family: Freestyle Script;
+}
+/*----------------------------------------- Thumbnail Images---------------------------------------------*/
+.hide {
+    display: none;
+}
+
+.show{
+    display: inline;
+    
+}
+
+.mainImg {
+    margin-top: -650px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3E3E3E;
+    width: 95%;
+    display:flex;
+    padding: 50px;
+}
+
+.image {
+    position: relative;
+    width: 55%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.description{
+    background-color: #000;
+    color: #fff;
+    margin-left: 50px;
+    padding: 50px;
+    width: 75%;
+    font-family: sans-serif;
+    font-size: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.thum-bar{
+    position: relative;
+    margin-top:0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10%;
+    width: 60%;
+    display: flex;
+}
+
+.thum-img{
+    position: relative;
+    height: 125px;
+    padding-right: 5px;
+    
+}
+/*----------------------------------------- Drop downs---------------------------------------------*/
+.coloricon{
+    height: 25px;
+    width: 25px;
+    display: flex;
+    gap: 2px;
+}
+.fontclricon{
+    position: relative;
+    height: 80%;
+    margin-left: -100px;
+    top: 5px;
+}
+.backclricon{
+    position: relative;
+    height: 100%;
+    margin-left: -50px;
+    margin-top:-2px;
+}
+
+.fontcolor_dropdown {
+    position: relative;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+.bgcolor_dropdown {
+    position: relative;
+    margin-top: 0px;
+    z-index: 1;
+}
+
+.fontcolor_dropdown label{
+    color: #fff;
+    opacity:0.8 ;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #000;
+    z-index: 1;
+ 
+}
+
+.bgcolor_dropdown label {
+    color: #fff;
+    opacity:0.8 ;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #000;
+    z-index: 1;
+}
+
+.fontcolor_dropdown label:hover{
+    background-color: rgb(194, 191, 191);
+    color: #000;
+}
+
+.bgcolor_dropdown label:hover{
+    background-color: rgb(194, 191, 191);
+    color: #000;
+}
